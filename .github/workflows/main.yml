@@ -13,6 +13,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - run: flutter pub get
+        shell: bash
+        working-directory: ${{inputs.workingDir}}
       - run: flutter packages pub run build_runner build
         shell: bash
         working-directory: ${{inputs.workingDir}}
