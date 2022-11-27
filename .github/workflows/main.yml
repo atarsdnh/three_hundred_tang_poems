@@ -9,8 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 # Only works with v2
+      - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /three_hundred_tang_poems/
