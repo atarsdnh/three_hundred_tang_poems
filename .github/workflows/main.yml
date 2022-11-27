@@ -13,6 +13,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - run: flutter packages pub run build_runner build
+        shell: bash
+        working-directory: ${{inputs.workingDir}}
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /three_hundred_tang_poems/
