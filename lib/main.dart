@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var box = await Hive.openBox<Poem>('poemBox');
     if (box.isEmpty) {
       Map<dynamic, Poem> entries = {};
-      await rootBundle.loadString('300poems.txt').then((value) {
+      await rootBundle.loadString('assets/300poems.txt').then((value) {
         final textLines = const LineSplitter().convert(value);
         for (var i = 0; i < textLines.length; i=i+4) {
           var poem = Poem(
