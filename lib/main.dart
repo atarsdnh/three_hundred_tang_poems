@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '唐詩三百首',
       theme: ThemeData(
         brightness: Brightness.dark,
         /* light theme settings */
