@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>唐詩三百首</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css" media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+    <div class="header" id="header">
+        <h1>唐詩三百首</h1>
+        <div>
+            <input type="text" id="search-input" placeholder="輸入搜尋關鍵字">
+            <button onclick="searchPoems()">搜尋</button>
+        </div>
+        <div class="filter-buttons">
+            <button data-word-count="20" onclick="filterByWordCount(20)">20</button>
+            <button data-word-count="22" onclick="filterByWordCount(22)">22</button>
+            <button data-word-count="28" onclick="filterByWordCount(28)">28</button>
+            <button data-word-count="30" onclick="filterByWordCount(30)">30</button>
+            <button data-word-count="40" onclick="filterByWordCount(40)">40</button>
+            <button data-word-count="42" onclick="filterByWordCount(42)">42</button>
+            <button data-word-count="50" onclick="filterByWordCount(50)">50</button>
+            <button data-word-count="54" onclick="filterByWordCount(54)">54</button>
+            <button data-word-count="56" onclick="filterByWordCount(56)">56</button>
+            <button data-word-count="60" onclick="filterByWordCount(60)">60以上</button>
+        </div>
+    </div>
+
+    <div id="poem-container"></div>
+    <div id="word-count-info" class="word-count">
+        Unique Word Counts: <!-- Placeholder for displaying the unique word counts -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

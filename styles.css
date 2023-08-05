@@ -1,0 +1,99 @@
+/* 反白樣式 */
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* Flexbox 布局 */
+div.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 36px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(26, 26, 26, 0.7);
+    padding: 10px;
+    transition: transform 0.3s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 調整 h1 標題的樣式 */
+div.header h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* 調整搜尋欄位寬度 */
+div.header input[type="text"] {
+    width: 200px;
+    background-color: #3d3d3d;
+    color: #fff;
+    border: none;
+    padding: 6px;
+}
+
+/* 未選取的按鈕樣式 */
+div.header button {
+    /* 添加一些基本樣式 */
+    background-color: #3d3d3d;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* 隱藏 header */
+.hidden {
+    transform: translateY(-100%);
+}
+
+/* 調整 poem-container 的 padding-top */
+#poem-container {
+    padding-top: 120px;
+    /* 調整成 header 的高度加上一些額外空間 */
+}
+
+/* 詩篇資訊樣式 */
+.poem-info {
+    flex: 1;
+    /* 詩篇資訊占滿剩餘空間 */
+    padding-right: 10px;
+    /* 加入一些右邊間距 */
+    display: flex;
+    /* 使用 Flexbox 排版 */
+    justify-content: space-between;
+    /* 將 title 和 word-count 並排且靠著最右邊 */
+}
+
+/* 詩篇資訊內的所有 <p> 標籤的外邊距設為 0 */
+.poem-info p {
+    margin: 0;
+}
+
+/* 字數樣式 */
+.word-count {
+    color: #666;
+    /* 調整字數的顏色 */
+}
+
+.filter-buttons {
+    display: flex;
+    /* 將 filter-buttons 設定為 Flex 容器 */
+    justify-content: space-between;
+    /* 將按鈕均勻分佈在容器內 */
+    margin-top: 10px;
+    /* 加入一些上方間距 */
+}
+
+/* 選取的按鈕樣式 */
+div.header button.selected {
+    /* 修改選取狀態的樣式 */
+    background-color: #fff;
+    color: #3d3d3d;
+    border: 1px solid #3d3d3d;
+}
